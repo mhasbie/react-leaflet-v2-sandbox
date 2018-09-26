@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-// import { Pane, FeatureGroup } from 'react-leaflet';
+import { withLeaflet } from 'react-leaflet';
 import Deflate from 'react-leaflet-deflate';
 import L from 'leaflet';
 // import Deflate from '../../package/react-leaflet-deflate/Deflate';
+const WrappedDeflate = withLeaflet(Deflate);
 
 
 class DeflateExample extends Component {
@@ -56,7 +57,7 @@ class DeflateExample extends Component {
 			featureLayer.bindTooltip(`Feature: #${feature.properties.id}`);
 		};
 		return (
-			<Deflate
+			<WrappedDeflate
 				data={geojson}
 				minSize={10}
 				markerCluster={true}

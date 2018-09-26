@@ -6,7 +6,7 @@ import React, { Component } from 'react';
 import L from 'leaflet';
 import { Map, TileLayer, Pane } from 'react-leaflet';
 
-// import DeflateExample from './DeflateExample';
+import DeflateExample from './DeflateExample';
 // import MeasureControlExample from './MeasureControlExample';
 // import PrintControlExample from './PrintControlExample';
 // import MagnifyingGlassControlExample from './MagnifyingGlassControlExample';
@@ -87,10 +87,11 @@ class MapCanvas extends Component {
 							attribution="&amp;copy <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
 							url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
 						/>
-						{/*
+						
 						<Pane>
 							<DeflateExample />
 						</Pane>
+						{/*
 						<MeasureControlExample />
 						<PrintControlExample />
 						<MagnifyingGlassControlExample />
